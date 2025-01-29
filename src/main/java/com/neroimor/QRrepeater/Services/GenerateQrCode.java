@@ -88,13 +88,13 @@ public class GenerateQrCode {
     }
 
     public String getUrlQrCode(String name){
-        log.info("Test");
         return userQRRepositroy.findByName(name)
                 .map(user -> {
+                    log.info( user.getUrl());
                     user.setCounter(user.getCounter() + 1);
                     userQRRepositroy.save(user);
-                    return user.getUrl();
+                    return user.getTranurl();
                 })
-                .orElse(pathNotFound); // Можно заменить на "default-url", если URL не найден
+                .orElse(pathNotFound);
     }
 }
