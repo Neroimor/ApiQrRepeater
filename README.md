@@ -13,7 +13,7 @@
 4) Метод удаление `http://localhost:8080/generate/delete/flamingo770383`
 
 ## пометка
-`/qr/{user}?repurl=url` где user имя qr кода, repurl = url адрес qr кода
-`/rep/{user}` где user имя qr кода
-`/delete/{user}` где user имя qr кода
-`/count/{user}` где user имя qr кода
+1) `/qr/{user}?repurl=url` где user имя qr кода, repurl = url адрес qr кода
+2) `/rep/{user}` где user имя qr кода
+3) `/delete/{user}` где user имя qr кода
+4) `/count/{user}` где user имя qr кода
