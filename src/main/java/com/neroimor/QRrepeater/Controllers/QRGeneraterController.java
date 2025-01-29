@@ -34,7 +34,11 @@ public class QRGeneraterController {
         log.info("Transition to another page");
         return new RedirectView(generateQrCode.getUrlQrCode(user));
     }
-
+    @GetMapping("/count/{user}")
+    public String getCounter(@PathVariable String user){
+        log.info("Transition to another page");
+        return String.valueOf(generateQrCode.getCounterQrCode(user));
+    }
     @GetMapping("/notFound")
     public String repeaterURL(){
         log.info("not found qr code");

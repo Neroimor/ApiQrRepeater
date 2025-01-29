@@ -8,7 +8,6 @@ import com.google.zxing.common.BitMatrix;
 import com.neroimor.QRrepeater.DAO.Model.UsersQR;
 import com.neroimor.QRrepeater.DAO.Repositorys.UserQRRepositroy;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -97,4 +96,14 @@ public class GenerateQrCode {
                 })
                 .orElse(pathNotFound);
     }
+
+    public Integer getCounterQrCode(String name){
+        return userQRRepositroy.findByName(name)
+                .map(user -> {
+                    int counter = user.getCounter();
+                    return counter;
+                }).orElse(0);
+    }
+
+
 }
