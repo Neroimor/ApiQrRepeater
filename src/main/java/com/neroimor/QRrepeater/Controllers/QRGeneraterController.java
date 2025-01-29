@@ -36,8 +36,12 @@ public class QRGeneraterController {
     }
     @GetMapping("/count/{user}")
     public String getCounter(@PathVariable String user){
-        log.info("Transition to another page");
+        log.info("Count user {}", user);
         return String.valueOf(generateQrCode.getCounterQrCode(user));
+    }
+    @DeleteMapping("/delete/{user}")
+    public void deleteQrCode(@PathVariable String user){
+        generateQrCode.deleteQrCode(user);
     }
     @GetMapping("/notFound")
     public String repeaterURL(){

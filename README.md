@@ -10,3 +10,10 @@
 
 3) Получить число перешедших `http://localhost:8080/generate/count/flamingo770383`
 
+4) Метод удаление `http://localhost:8080/generate/delete/flamingo770383`
+
+## пометка
+`/qr/{user}?repurl=url` где user имя qr кода, repurl = url адрес qr кода
+`/rep/{user}` где user имя qr кода
+`/delete/{user}` где user имя qr кода
+`/count/{user}` где user имя qr кода
