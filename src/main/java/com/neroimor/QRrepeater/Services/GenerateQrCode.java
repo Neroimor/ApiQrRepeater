@@ -105,5 +105,11 @@ public class GenerateQrCode {
                 }).orElse(0);
     }
 
+    public void deleteQrCode(String name) {
+        userQRRepositroy.findByName(name)
+                .ifPresent(userQRRepositroy::delete);
+    }
+
+
 
 }
